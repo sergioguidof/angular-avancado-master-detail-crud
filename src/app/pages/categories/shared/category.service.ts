@@ -1,5 +1,4 @@
 import { Injectable, Injector } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {Category} from "./category.model";
 
 import {BaseResourceService} from "../../../shared/services/base-resource.service";
