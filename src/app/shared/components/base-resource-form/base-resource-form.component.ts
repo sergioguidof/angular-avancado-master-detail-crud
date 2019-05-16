@@ -51,7 +51,6 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
         this.createResource();
         else 
         this.updateResource();
-        
     }
 
 
@@ -106,7 +105,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
         )
     }
 
-    protected updateCategory() {
+    protected updateResource() {
         const resource: T = this.jsonDataToResourceFn(this.resourceForm.value);
 
         this.resourceService.update(resource)
