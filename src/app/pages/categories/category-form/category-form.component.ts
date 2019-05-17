@@ -1,10 +1,10 @@
 import { Component, Injector } from '@angular/core';
-import {Validators}from "@angular/forms";
+import { Validators } from "@angular/forms";
 
 import { BaseResourceFormComponent } from "../../../shared/components/base-resource-form/base-resource-form.component";
 
-import {Category} from "../shared/category.model";
-import {CategoryService} from "../shared/category.service";
+import { Category } from "../shared/category.model";
+import { CategoryService } from "../shared/category.service";
 import { extend } from 'webdriver-js-extender';
 
 @Component({
@@ -20,7 +20,7 @@ export class CategoryFormComponent extends BaseResourceFormComponent<Category> {
     protected injector: Injector
   ) {
     super(injector, new Category(), categoryService, Category.fromJson);
-   }
+  }
 
   protected buildResourceForm() {
     this.resourceForm = this.formBuilder.group({
@@ -35,7 +35,7 @@ export class CategoryFormComponent extends BaseResourceFormComponent<Category> {
   }
 
   protected editionPageTitle(): string {
-    const categoryName = this.resource.name || "";
-    return "Editando Categoria: " + categoryName;
+    const resourceName = this.resource.name || "";
+    return "Editando Categoria: " + resourceName;
   }
 }
